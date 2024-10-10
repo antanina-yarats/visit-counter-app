@@ -1,4 +1,4 @@
-import { serve } from "./deps.js";
+
 import { renderFile, configure } from "./deps.js";
 
 
@@ -31,5 +31,4 @@ const handleRequest = async (request) => {
    
 }
 
-const port = Deno.env.get("PORT") || 7773;
-serve(handleRequest, { port });
+Deno.serve({port: 7777}, handleRequest);
